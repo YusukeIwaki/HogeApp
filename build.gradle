@@ -9,8 +9,33 @@ buildscript {
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath 'com.deploygate:gradle:0.6.2'
     }
 }
+apply plugin: 'deploygate'
+
+deploygate {
+    userName = "YusukeIwaki"
+    token = deploygateApiKey
+
+    apks {
+//        release {
+//            sourceFile = file("[apk1 file path]")
+//        }
+
+        debug {
+            sourceFile = file("${project.rootDir}/app/build/outputs/apk/app-debug.apk")
+
+            //Below is optional
+            message = deploygateMsg
+//            visibility = "public" // default private
+//            distributionKey = "[distribution_key]"
+//            releaseNote = "release note sample"
+        }
+    }
+}
+
+//./gradlew connectedAndroidTest && ./gradlew uploadDeployGate -PdeploygateMsg=deploygateメッセージ
 
 allprojects {
     repositories {

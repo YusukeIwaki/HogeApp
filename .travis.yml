@@ -6,6 +6,10 @@ env:
   matrix:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
+  secure:
+    # travis encrypt -r YusukeIwaki/HogeApp DEPLOYGATE_API_KEY=ひ・み・つ
+    - MNL64nxmOnwEX2NeOo3b3FVBrAif5wBoLQ5bV4UZptPlhaXLgZA2Zy58DvUoBstao0DkaA8wXFVm4F+CNWX9pbfzDBCgyg4dQgLb6KhgZ6DJI4GbpMbrbIxiEn38diLUMpz3Kv+drvKzygYyGNKh548vAnbRTLxQOEg39/CWCkU=
+
 android:
   components:
     # Uncomment the lines below if you want to
@@ -37,4 +41,4 @@ before_script:
   - adb wait-for-device
   - adb shell input keyevent 82 &
 
-script: ./gradlew connectedAndroidTest --info --stacktrace
+script: ./gradlew connectedAndroidTest --info --stacktrace && ./gradlew uploadDeployGate -PdeploygateApiKey=$DEPLOYGATE_API_KEY -PdeploygateMsg=deploygateメッセージ
