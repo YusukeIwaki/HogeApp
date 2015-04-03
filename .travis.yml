@@ -24,5 +24,4 @@ android:
     # if you need to run emulator(s) during your tests
     - sys-img-armeabi-v7a-android-15 # (ver > 4.0.3)
 
-  script:
-    gradle connectedInstrumentTestT
+  script: gradle connectedInstrumentTest
