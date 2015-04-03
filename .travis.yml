@@ -5,8 +5,7 @@ jdk: oraclejdk7
 env:
   matrix:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
-
-  secure: "MNL64nxmOnwEX2NeOo3b3FVBrAif5wBoLQ5bV4UZptPlhaXLgZA2Zy58DvUoBstao0DkaA8wXFVm4F+CNWX9pbfzDBCgyg4dQgLb6KhgZ6DJI4GbpMbrbIxiEn38diLUMpz3Kv+drvKzygYyGNKh548vAnbRTLxQOEg39/CWCkU="
+    - secure: "MNL64nxmOnwEX2NeOo3b3FVBrAif5wBoLQ5bV4UZptPlhaXLgZA2Zy58DvUoBstao0DkaA8wXFVm4F+CNWX9pbfzDBCgyg4dQgLb6KhgZ6DJI4GbpMbrbIxiEn38diLUMpz3Kv+drvKzygYyGNKh548vAnbRTLxQOEg39/CWCkU="
 
 android:
   components:
