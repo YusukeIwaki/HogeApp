@@ -16,7 +16,7 @@ apply plugin: 'deploygate'
 
 deploygate {
     userName = "YusukeIwaki"
-    token = deploygateApiKey
+    token = "$System.env.DEPLOYGATE_API_KEY"
 
     apks {
 //        release {
