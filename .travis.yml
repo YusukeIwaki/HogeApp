@@ -6,6 +6,9 @@ env:
   global:
     # define DEPLOYGATE_API_KEY securely
     - secure: "MNL64nxmOnwEX2NeOo3b3FVBrAif5wBoLQ5bV4UZptPlhaXLgZA2Zy58DvUoBstao0DkaA8wXFVm4F+CNWX9pbfzDBCgyg4dQgLb6KhgZ6DJI4GbpMbrbIxiEn38diLUMpz3Kv+drvKzygYyGNKh548vAnbRTLxQOEg39/CWCkU="
+
+    # Tips: http://stackoverflow.com/questions/28949722/android-tests-fail-on-travis-with-shellcommandunresponsiveexception
+    - ADB_INSTALL_TIMEOUT=8 #min. (default: 2 min.)
   matrix:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
