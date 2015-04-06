@@ -19,9 +19,10 @@ deploygate {
     token = "$System.env.DEPLOYGATE_API_KEY"
 
     apks {
-//        release {
-//            sourceFile = file("[apk1 file path]")
-//        }
+        release {
+            sourceFile = file("${project.rootDir}/app/app-release.apk")
+            message = deploygateMsg
+        }
 
         debug {
             sourceFile = file("${project.rootDir}/app/build/outputs/apk/app-debug.apk")
