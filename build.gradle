@@ -24,15 +24,15 @@ deploygate {
             message = deploygateMsg
         }
 
-        debug {
-            sourceFile = file("${project.rootDir}/app/build/outputs/apk/app-debug.apk")
-
-            //Below is optional
-            message = deploygateMsg
+//        debug {
+//            sourceFile = file("${project.rootDir}/app/build/outputs/apk/app-debug.apk")
+//
+//            //Below is optional
+//            message = deploygateMsg
 //            visibility = "public" // default private
 //            distributionKey = "[distribution_key]"
 //            releaseNote = "release note sample"
-        }
+//        }
     }
 }
 
