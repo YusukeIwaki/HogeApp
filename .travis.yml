@@ -12,6 +12,9 @@ env:
   matrix:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
+notifications:
+  slack: crowdworks:bq74wVT9Pd7iEo4jboB3YACq
+
 branches:
   only:
     - master
