@@ -13,7 +13,8 @@ env:
     - ANDROID_TARGET=android-21  ANDROID_ABI=armeabi-v7a
 
 notifications:
-  slack: crowdworks:bq74wVT9Pd7iEo4jboB3YACq
+  slack:
+    secure: "bQH0BaZUvOU7buTpOQ2Pz+doZ1eddWHk4H6aM6tQvcY0cuaP8DmclfYJqLyrv6RpU3FXBJCaEP5hENx2jEL1IFcWmcZ1olGI6mtwAyM2pLm2V384AoKs0iTsmiGBhhjthwevlat9+qaDrPQt/xL2g45sB4QJUfRxg8arFb/xncA="
 
 branches:
   only:
