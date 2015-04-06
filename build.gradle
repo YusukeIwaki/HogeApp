@@ -20,7 +20,7 @@ deploygate {
 
     apks {
         release {
-            sourceFile = file("${project.rootDir}/app/app-release.apk")
+            sourceFile = file("${project.rootDir}/app/build/outputs/apk/app-release.apk")
             message = deploygateMsg
         }
 
