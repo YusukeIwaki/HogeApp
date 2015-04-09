@@ -1,0 +1,19 @@
+#!/bin/bash
+
+set +e
+
+bootcompleted=0
+failcounter=0
+until [[ "$bootcompleted" =~ "1" ]]; do
+   bootcompleted=`adb -e shell getprop sys.boot_completed 2>&1`
+   echo "$bootcompleted"
+   if [[ "$bootcompleted" =~ "not found" ]]; then
+      let "failcounter += 1"
+      if [[ $failcounter -gt 15 ]]; then
+        echo "Failed to start emulator"
+        exit 1
+      fi
+   fi
+   sleep 1
+done
+echo "Done"
